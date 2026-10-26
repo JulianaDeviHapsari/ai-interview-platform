@@ -11,6 +11,9 @@ class PortfolioSkill < ApplicationRecord
   validates :ai_confidence, inclusion: { in: CONFIDENCE_LEVELS }
   validates :competency_summary, presence: true
 
+  # Skills inherit their organization from portfolio -> session. See Portfolio.for_tenant.
+  scope :for_tenant, ->(tenant_id) { joins(portfolio: :session).where(sessions: { tenant_id: tenant_id }) }
+
   # evidence is stored as JSONB array of quote strings
   def evidence_quotes
     Array(evidence)
