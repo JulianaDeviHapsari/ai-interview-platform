@@ -127,13 +127,20 @@ export interface VacancySkill {
 
 export type SkillComparisonResult = "match" | "gap" | "exceed" | "not_assessed";
 
+/**
+ * One row of a fit/gap report, exactly as api/app/services/fit_gap/engine.rb emits it.
+ * `candidate_level`, `delta` and `confidence` are null when the skill was not assessed.
+ * `overridden` is absent on reports generated before the API started sending it.
+ */
 export interface SkillComparison {
   skill_label: string;
-  required_level: number;
-  candidate_level?: number;
+  skill_id?: string | null;
+  expected_level: number;
+  candidate_level?: number | null;
   result: SkillComparisonResult;
-  delta?: number;
-  is_override?: boolean;
+  delta?: number | null;
+  confidence?: "high" | "medium" | "low" | null;
+  overridden?: boolean;
 }
 
 export interface FitGapReport {
