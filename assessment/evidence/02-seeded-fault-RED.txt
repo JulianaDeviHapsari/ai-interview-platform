@@ -1,0 +1,210 @@
+
+ RUN  v3.2.7 /home/claude/rakamindev/ai-interview-platform/web
+
+ ✓ src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > shows the required level that the API sends as expected_level 274ms
+ × src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > marks only rows with a human override 64ms
+   → Unable to find a label with the text of: Overridden by assessor
+
+Ignored nodes: comments, script, style
+<tr
+  class="border-b last:border-0"
+>
+  <td
+    class="px-4 py-2.5 break-words min-w-0 max-w-[16rem]"
+  >
+    SQL
+  </td>
+  <td
+    class="px-4 py-2.5 text-center text-muted-foreground"
+  >
+    L3
+  </td>
+  <td
+    class="px-4 py-2.5 text-center"
+  >
+    <span>
+      L4
+    </span>
+  </td>
+  <td
+    class="px-4 py-2.5 text-center"
+  >
+    <div
+      class="inline-flex flex-col items-center gap-0.5"
+    >
+      <span
+        class="inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded text-green-700 bg-green-50"
+      >
+        ⭐
+
+        Exceeds
+         +1
+      </span>
+    </div>
+  </td>
+</tr>
+ × src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > does not present a skill that was never assessed as a gap 51ms
+   → Unable to find an element with the text: /not assessed/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<tr
+  class="border-b last:border-0"
+>
+  <td
+    class="px-4 py-2.5 break-words min-w-0 max-w-[16rem]"
+  >
+    System Design
+  </td>
+  <td
+    class="px-4 py-2.5 text-center text-muted-foreground"
+  >
+    L4
+  </td>
+  <td
+    class="px-4 py-2.5 text-center"
+  >
+    <span
+      class="text-muted-foreground"
+    >
+      —
+    </span>
+  </td>
+  <td
+    class="px-4 py-2.5 text-center"
+  >
+    <div
+      class="inline-flex flex-col items-center gap-0.5"
+    >
+      <span
+        class="inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded text-neutral-500 bg-neutral-50"
+      >
+        —
+
+        Gap
+      </span>
+    </div>
+  </td>
+</tr>
+ ✓ src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > flags a gap that rests on thin evidence instead of stating it flatly 20ms
+ ✓ src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > only shows the override legend when an override exists 9ms
+ ✓ src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > renders an empty comparison list without crashing and says so 2ms
+ ✓ src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > keeps a very long skill label inside the table 18ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > marks only rows with a human override
+TestingLibraryElementError: Unable to find a label with the text of: Overridden by assessor
+
+Ignored nodes: comments, script, style
+<tr
+  class="border-b last:border-0"
+>
+  <td
+    class="px-4 py-2.5 break-words min-w-0 max-w-[16rem]"
+  >
+    SQL
+  </td>
+  <td
+    class="px-4 py-2.5 text-center text-muted-foreground"
+  >
+    L3
+  </td>
+  <td
+    class="px-4 py-2.5 text-center"
+  >
+    <span>
+      L4
+    </span>
+  </td>
+  <td
+    class="px-4 py-2.5 text-center"
+  >
+    <div
+      class="inline-flex flex-col items-center gap-0.5"
+    >
+      <span
+        class="inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded text-green-700 bg-green-50"
+      >
+        ⭐
+
+        Exceeds
+         +1
+      </span>
+    </div>
+  </td>
+</tr>
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ getAllByLabelText node_modules/@testing-library/dom/dist/queries/label-text.js:111:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/components/fitgap/ComparisonTable.test.tsx:56:34
+     54|     render(<ComparisonTable comparisons={apiRows} />);
+     55|
+     56|     expect(within(rowFor("SQL")).getByLabelText("Overridden by assesso…
+       |                                  ^
+     57|     expect(within(rowFor("React")).queryByLabelText("Overridden by ass…
+     58|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > does not present a skill that was never assessed as a gap
+TestingLibraryElementError: Unable to find an element with the text: /not assessed/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<tr
+  class="border-b last:border-0"
+>
+  <td
+    class="px-4 py-2.5 break-words min-w-0 max-w-[16rem]"
+  >
+    System Design
+  </td>
+  <td
+    class="px-4 py-2.5 text-center text-muted-foreground"
+  >
+    L4
+  </td>
+  <td
+    class="px-4 py-2.5 text-center"
+  >
+    <span
+      class="text-muted-foreground"
+    >
+      —
+    </span>
+  </td>
+  <td
+    class="px-4 py-2.5 text-center"
+  >
+    <div
+      class="inline-flex flex-col items-center gap-0.5"
+    >
+      <span
+        class="inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded text-neutral-500 bg-neutral-50"
+      >
+        —
+
+        Gap
+      </span>
+    </div>
+  </td>
+</tr>
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/components/fitgap/ComparisonTable.test.tsx:64:24
+     62|
+     63|     const row = rowFor("System Design");
+     64|     expect(within(row).getByText(/not assessed/i)).toBeInTheDocument();
+       |                        ^
+     65|     expect(within(row).queryByText(/gap/i)).not.toBeInTheDocument();
+     66|     // No candidate level to show, and nothing numeric invented for it.
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 5 passed (7)
+   Start at  09:30:46
+   Duration  1.72s (transform 125ms, setup 157ms, collect 94ms, tests 440ms, environment 656ms, prepare 136ms)

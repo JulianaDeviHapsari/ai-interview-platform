@@ -1,0 +1,15 @@
+
+ RUN  v3.2.7 /home/claude/rakamindev/ai-interview-platform/web
+
+ ✓ src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > shows the required level that the API sends as expected_level 256ms
+ ✓ src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > marks only rows with a human override 72ms
+ ✓ src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > does not present a skill that was never assessed as a gap 42ms
+ ✓ src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > flags a gap that rests on thin evidence instead of stating it flatly 35ms
+ ✓ src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > only shows the override legend when an override exists 9ms
+ ✓ src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > renders an empty comparison list without crashing and says so 2ms
+ ✓ src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > keeps a very long skill label inside the table 25ms
+
+ Test Files  1 passed (1)
+      Tests  7 passed (7)
+   Start at  09:30:03
+   Duration  1.80s (transform 113ms, setup 140ms, collect 83ms, tests 444ms, environment 712ms, prepare 176ms)

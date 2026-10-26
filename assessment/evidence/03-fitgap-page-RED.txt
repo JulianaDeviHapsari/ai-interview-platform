@@ -1,0 +1,1052 @@
+
+ RUN  v3.2.7 /home/claude/rakamindev/ai-interview-platform/web
+
+ × src/pages/fitgap/FitGapReportPage.test.tsx > FitGapReportPage > asks the API to generate the report once, no matter how long generation takes 49ms
+   → expected "spy" to be called 1 times, but got 7 times
+ ✓ src/pages/fitgap/FitGapReportPage.test.tsx > FitGapReportPage > shows the report and stops polling once it exists 49ms
+ × src/pages/fitgap/FitGapReportPage.test.tsx > FitGapReportPage > tells the user when the report could not be loaded, instead of generating another one 174ms
+   → Unable to find an accessible element with the role "alert"
+
+Here are the accessible roles:
+
+  link:
+
+  Name "":
+  <a
+    class="text-muted-foreground hover:text-foreground"
+    data-discover="true"
+    href="/assessments/1/sessions/2/portfolio"
+  />
+
+  --------------------------------------------------
+  heading:
+
+  Name "Fit/Gap Report":
+  <h1
+    class="text-lg font-semibold"
+  />
+
+  --------------------------------------------------
+  button:
+
+  Name "Regenerate":
+  <button
+    class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs"
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      class="max-w-2xl mx-auto space-y-6"
+    >
+      <div
+        class="flex items-start justify-between"
+      >
+        <div
+          class="space-y-1"
+        >
+          <div
+            class="flex items-center gap-2"
+          >
+            <a
+              class="text-muted-foreground hover:text-foreground"
+              data-discover="true"
+              href="/assessments/1/sessions/2/portfolio"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-arrow-left h-4 w-4"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m12 19-7-7 7-7"
+                />
+                <path
+                  d="M19 12H5"
+                />
+              </svg>
+            </a>
+            <h1
+              class="text-lg font-semibold"
+            >
+              Fit/Gap Report
+            </h1>
+          </div>
+        </div>
+        <div
+          class="flex gap-2"
+        >
+          <button
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-refresh-cw h-3.5 w-3.5 mr-1"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"
+              />
+              <path
+                d="M21 3v5h-5"
+              />
+              <path
+                d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"
+              />
+              <path
+                d="M8 16H3v5"
+              />
+            </svg>
+            Regenerate
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ × src/pages/fitgap/FitGapReportPage.test.tsx > FitGapReportPage > tells the user when generation could not be started 37ms
+   → Unable to find an accessible element with the role "alert"
+
+Here are the accessible roles:
+
+  link:
+
+  Name "":
+  <a
+    class="text-muted-foreground hover:text-foreground"
+    data-discover="true"
+    href="/assessments/1/sessions/2/portfolio"
+  />
+
+  --------------------------------------------------
+  heading:
+
+  Name "Fit/Gap Report":
+  <h1
+    class="text-lg font-semibold"
+  />
+
+  --------------------------------------------------
+  button:
+
+  Name "Regenerate":
+  <button
+    class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs"
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      class="max-w-2xl mx-auto space-y-6"
+    >
+      <div
+        class="flex items-start justify-between"
+      >
+        <div
+          class="space-y-1"
+        >
+          <div
+            class="flex items-center gap-2"
+          >
+            <a
+              class="text-muted-foreground hover:text-foreground"
+              data-discover="true"
+              href="/assessments/1/sessions/2/portfolio"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-arrow-left h-4 w-4"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m12 19-7-7 7-7"
+                />
+                <path
+                  d="M19 12H5"
+                />
+              </svg>
+            </a>
+            <h1
+              class="text-lg font-semibold"
+            >
+              Fit/Gap Report
+            </h1>
+          </div>
+        </div>
+        <div
+          class="flex gap-2"
+        >
+          <button
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-refresh-cw h-3.5 w-3.5 mr-1"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"
+              />
+              <path
+                d="M21 3v5h-5"
+              />
+              <path
+                d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"
+              />
+              <path
+                d="M8 16H3v5"
+              />
+            </svg>
+            Regenerate
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ × src/pages/fitgap/FitGapReportPage.test.tsx > FitGapReportPage > stops waiting after a while instead of spinning forever 64ms
+   → Unable to find an accessible element with the role "alert"
+
+Here are the accessible roles:
+
+  link:
+
+  Name "":
+  <a
+    class="text-muted-foreground hover:text-foreground"
+    data-discover="true"
+    href="/assessments/1/sessions/2/portfolio"
+  />
+
+  --------------------------------------------------
+  heading:
+
+  Name "Fit/Gap Report":
+  <h1
+    class="text-lg font-semibold"
+  />
+
+  --------------------------------------------------
+  button:
+
+  Name "Regenerate":
+  <button
+    class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs"
+    disabled=""
+  />
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  <p
+    class="text-sm text-muted-foreground"
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      class="max-w-2xl mx-auto space-y-6"
+    >
+      <div
+        class="flex items-start justify-between"
+      >
+        <div
+          class="space-y-1"
+        >
+          <div
+            class="flex items-center gap-2"
+          >
+            <a
+              class="text-muted-foreground hover:text-foreground"
+              data-discover="true"
+              href="/assessments/1/sessions/2/portfolio"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-arrow-left h-4 w-4"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m12 19-7-7 7-7"
+                />
+                <path
+                  d="M19 12H5"
+                />
+              </svg>
+            </a>
+            <h1
+              class="text-lg font-semibold"
+            >
+              Fit/Gap Report
+            </h1>
+          </div>
+        </div>
+        <div
+          class="flex gap-2"
+        >
+          <button
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs"
+            disabled=""
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-refresh-cw h-3.5 w-3.5 mr-1"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"
+              />
+              <path
+                d="M21 3v5h-5"
+              />
+              <path
+                d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"
+              />
+              <path
+                d="M8 16H3v5"
+              />
+            </svg>
+            Regenerate
+          </button>
+        </div>
+      </div>
+      <div
+        class="border rounded-lg p-12 text-center space-y-3"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-loader-circle h-8 w-8 animate-spin text-primary mx-auto"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M21 12a9 9 0 1 1-6.219-8.56"
+          />
+        </svg>
+        <p
+          class="text-sm text-muted-foreground"
+        >
+          Generating fit/gap report...
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+ × src/pages/fitgap/FitGapReportPage.test.tsx > FitGapReportPage > tells the user when the portfolio itself could not be loaded 23ms
+   → Unable to find an accessible element with the role "alert"
+
+Here are the accessible roles:
+
+  link:
+
+  Name "":
+  <a
+    class="text-muted-foreground hover:text-foreground"
+    data-discover="true"
+    href="/assessments/1/sessions/2/portfolio"
+  />
+
+  --------------------------------------------------
+  heading:
+
+  Name "Fit/Gap Report":
+  <h1
+    class="text-lg font-semibold"
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      class="max-w-2xl mx-auto space-y-6"
+    >
+      <div
+        class="flex items-start justify-between"
+      >
+        <div
+          class="space-y-1"
+        >
+          <div
+            class="flex items-center gap-2"
+          >
+            <a
+              class="text-muted-foreground hover:text-foreground"
+              data-discover="true"
+              href="/assessments/1/sessions/2/portfolio"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-arrow-left h-4 w-4"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m12 19-7-7 7-7"
+                />
+                <path
+                  d="M19 12H5"
+                />
+              </svg>
+            </a>
+            <h1
+              class="text-lg font-semibold"
+            >
+              Fit/Gap Report
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/pages/fitgap/FitGapReportPage.test.tsx > FitGapReportPage > asks the API to generate the report once, no matter how long generation takes
+AssertionError: expected "spy" to be called 1 times, but got 7 times
+ ❯ src/pages/fitgap/FitGapReportPage.test.tsx:76:27
+     74|     await tick(POLL_MS * 6);
+     75|
+     76|     expect(triggerFitGap).toHaveBeenCalledTimes(1);
+       |                           ^
+     77|     // ...while still checking whether the report has appeared.
+     78|     expect(getFitGap.mock.calls.length).toBeGreaterThan(2);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/5]⎯
+
+ FAIL  src/pages/fitgap/FitGapReportPage.test.tsx > FitGapReportPage > tells the user when the report could not be loaded, instead of generating another one
+TestingLibraryElementError: Unable to find an accessible element with the role "alert"
+
+Here are the accessible roles:
+
+  link:
+
+  Name "":
+  <a
+    class="text-muted-foreground hover:text-foreground"
+    data-discover="true"
+    href="/assessments/1/sessions/2/portfolio"
+  />
+
+  --------------------------------------------------
+  heading:
+
+  Name "Fit/Gap Report":
+  <h1
+    class="text-lg font-semibold"
+  />
+
+  --------------------------------------------------
+  button:
+
+  Name "Regenerate":
+  <button
+    class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs"
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      class="max-w-2xl mx-auto space-y-6"
+    >
+      <div
+        class="flex items-start justify-between"
+      >
+        <div
+          class="space-y-1"
+        >
+          <div
+            class="flex items-center gap-2"
+          >
+            <a
+              class="text-muted-foreground hover:text-foreground"
+              data-discover="true"
+              href="/assessments/1/sessions/2/portfolio"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-arrow-left h-4 w-4"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m12 19-7-7 7-7"
+                />
+                <path
+                  d="M19 12H5"
+                />
+              </svg>
+            </a>
+            <h1
+              class="text-lg font-semibold"
+            >
+              Fit/Gap Report
+            </h1>
+          </div>
+        </div>
+        <div
+          class="flex gap-2"
+        >
+          <button
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-refresh-cw h-3.5 w-3.5 mr-1"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"
+              />
+              <path
+                d="M21 3v5h-5"
+              />
+              <path
+                d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"
+              />
+              <path
+                d="M8 16H3v5"
+              />
+            </svg>
+            Regenerate
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/pages/fitgap/FitGapReportPage.test.tsx:101:19
+     99|     await tick();
+    100|
+    101|     expect(screen.getByRole("alert")).toHaveTextContent(/could not loa…
+       |                   ^
+    102|     expect(triggerFitGap).not.toHaveBeenCalled();
+    103|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/5]⎯
+
+ FAIL  src/pages/fitgap/FitGapReportPage.test.tsx > FitGapReportPage > tells the user when generation could not be started
+TestingLibraryElementError: Unable to find an accessible element with the role "alert"
+
+Here are the accessible roles:
+
+  link:
+
+  Name "":
+  <a
+    class="text-muted-foreground hover:text-foreground"
+    data-discover="true"
+    href="/assessments/1/sessions/2/portfolio"
+  />
+
+  --------------------------------------------------
+  heading:
+
+  Name "Fit/Gap Report":
+  <h1
+    class="text-lg font-semibold"
+  />
+
+  --------------------------------------------------
+  button:
+
+  Name "Regenerate":
+  <button
+    class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs"
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      class="max-w-2xl mx-auto space-y-6"
+    >
+      <div
+        class="flex items-start justify-between"
+      >
+        <div
+          class="space-y-1"
+        >
+          <div
+            class="flex items-center gap-2"
+          >
+            <a
+              class="text-muted-foreground hover:text-foreground"
+              data-discover="true"
+              href="/assessments/1/sessions/2/portfolio"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-arrow-left h-4 w-4"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m12 19-7-7 7-7"
+                />
+                <path
+                  d="M19 12H5"
+                />
+              </svg>
+            </a>
+            <h1
+              class="text-lg font-semibold"
+            >
+              Fit/Gap Report
+            </h1>
+          </div>
+        </div>
+        <div
+          class="flex gap-2"
+        >
+          <button
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-refresh-cw h-3.5 w-3.5 mr-1"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"
+              />
+              <path
+                d="M21 3v5h-5"
+              />
+              <path
+                d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"
+              />
+              <path
+                d="M8 16H3v5"
+              />
+            </svg>
+            Regenerate
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/pages/fitgap/FitGapReportPage.test.tsx:112:19
+    110|     await tick();
+    111|
+    112|     expect(screen.getByRole("alert")).toHaveTextContent(/could not sta…
+       |                   ^
+    113|   });
+    114|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/5]⎯
+
+ FAIL  src/pages/fitgap/FitGapReportPage.test.tsx > FitGapReportPage > stops waiting after a while instead of spinning forever
+TestingLibraryElementError: Unable to find an accessible element with the role "alert"
+
+Here are the accessible roles:
+
+  link:
+
+  Name "":
+  <a
+    class="text-muted-foreground hover:text-foreground"
+    data-discover="true"
+    href="/assessments/1/sessions/2/portfolio"
+  />
+
+  --------------------------------------------------
+  heading:
+
+  Name "Fit/Gap Report":
+  <h1
+    class="text-lg font-semibold"
+  />
+
+  --------------------------------------------------
+  button:
+
+  Name "Regenerate":
+  <button
+    class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs"
+    disabled=""
+  />
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  <p
+    class="text-sm text-muted-foreground"
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      class="max-w-2xl mx-auto space-y-6"
+    >
+      <div
+        class="flex items-start justify-between"
+      >
+        <div
+          class="space-y-1"
+        >
+          <div
+            class="flex items-center gap-2"
+          >
+            <a
+              class="text-muted-foreground hover:text-foreground"
+              data-discover="true"
+              href="/assessments/1/sessions/2/portfolio"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-arrow-left h-4 w-4"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m12 19-7-7 7-7"
+                />
+                <path
+                  d="M19 12H5"
+                />
+              </svg>
+            </a>
+            <h1
+              class="text-lg font-semibold"
+            >
+              Fit/Gap Report
+            </h1>
+          </div>
+        </div>
+        <div
+          class="flex gap-2"
+        >
+          <button
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs"
+            disabled=""
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-refresh-cw h-3.5 w-3.5 mr-1"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"
+              />
+              <path
+                d="M21 3v5h-5"
+              />
+              <path
+                d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"
+              />
+              <path
+                d="M8 16H3v5"
+              />
+            </svg>
+            Regenerate
+          </button>
+        </div>
+      </div>
+      <div
+        class="border rounded-lg p-12 text-center space-y-3"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-loader-circle h-8 w-8 animate-spin text-primary mx-auto"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M21 12a9 9 0 1 1-6.219-8.56"
+          />
+        </svg>
+        <p
+          class="text-sm text-muted-foreground"
+        >
+          Generating fit/gap report...
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/pages/fitgap/FitGapReportPage.test.tsx:122:19
+    120|     await tick(POLL_MS * 70);
+    121|
+    122|     expect(screen.getByRole("alert")).toHaveTextContent(/longer than e…
+       |                   ^
+    123|     const callsAtGiveUp = getFitGap.mock.calls.length;
+    124|     await tick(POLL_MS * 10);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/5]⎯
+
+ FAIL  src/pages/fitgap/FitGapReportPage.test.tsx > FitGapReportPage > tells the user when the portfolio itself could not be loaded
+TestingLibraryElementError: Unable to find an accessible element with the role "alert"
+
+Here are the accessible roles:
+
+  link:
+
+  Name "":
+  <a
+    class="text-muted-foreground hover:text-foreground"
+    data-discover="true"
+    href="/assessments/1/sessions/2/portfolio"
+  />
+
+  --------------------------------------------------
+  heading:
+
+  Name "Fit/Gap Report":
+  <h1
+    class="text-lg font-semibold"
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      class="max-w-2xl mx-auto space-y-6"
+    >
+      <div
+        class="flex items-start justify-between"
+      >
+        <div
+          class="space-y-1"
+        >
+          <div
+            class="flex items-center gap-2"
+          >
+            <a
+              class="text-muted-foreground hover:text-foreground"
+              data-discover="true"
+              href="/assessments/1/sessions/2/portfolio"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-arrow-left h-4 w-4"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m12 19-7-7 7-7"
+                />
+                <path
+                  d="M19 12H5"
+                />
+              </svg>
+            </a>
+            <h1
+              class="text-lg font-semibold"
+            >
+              Fit/Gap Report
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/pages/fitgap/FitGapReportPage.test.tsx:134:19
+    132|     await tick();
+    133|
+    134|     expect(screen.getByRole("alert")).toHaveTextContent(/could not loa…
+       |                   ^
+    135|     expect(getFitGap).not.toHaveBeenCalled();
+    136|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/5]⎯
+
+⎯⎯⎯⎯⎯⎯ Unhandled Errors ⎯⎯⎯⎯⎯⎯
+
+Vitest caught 1 unhandled error during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.
+
+⎯⎯⎯⎯ Unhandled Rejection ⎯⎯⎯⎯⎯
+Error: HTTP 500
+ ❯ httpError src/pages/fitgap/FitGapReportPage.test.tsx:37:24
+     35|
+     36| function httpError(status: number) {
+     37|   return Object.assign(new Error(`HTTP ${status}`), { response: { stat…
+       |                        ^
+     38| }
+     39|
+ ❯ src/pages/fitgap/FitGapReportPage.test.tsx:129:36
+ ❯ node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+ ❯ node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+ ❯ node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+ ❯ runWithTimeout node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10
+ ❯ runTest node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12
+ ❯ runSuite node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8
+ ❯ runSuite node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { response: { status: 500 } }
+This error originated in "src/pages/fitgap/FitGapReportPage.test.tsx" test file. It doesn't mean the error was thrown inside the file itself, but while it was running.
+The latest test that might've caused the error is "tells the user when the portfolio itself could not be loaded". It might mean one of the following:
+- The error was thrown, while Vitest was running this test.
+- If the error occurred after the test had been completed, this was the last documented test before it was thrown.
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+
+
+ Test Files  1 failed (1)
+      Tests  5 failed | 1 passed (6)
+     Errors  1 error
+   Start at  09:31:47
+   Duration  2.15s (transform 201ms, setup 155ms, collect 375ms, tests 398ms, environment 750ms, prepare 238ms)

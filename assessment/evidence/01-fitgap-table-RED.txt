@@ -1,0 +1,377 @@
+
+ RUN  v3.2.7 /home/claude/rakamindev/ai-interview-platform/web
+
+ × src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > shows the required level that the API sends as expected_level 266ms
+   → expect(element).toHaveTextContent()
+
+Expected element to have text content:
+  L3
+Received:
+
+ × src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > marks only rows with a human override 57ms
+   → Unable to find a label with the text of: Overridden by assessor
+
+Ignored nodes: comments, script, style
+<tr
+  class="border-b last:border-0"
+>
+  <td
+    class="px-4 py-2.5"
+  >
+    SQL
+  </td>
+  <td
+    class="px-4 py-2.5 text-center text-muted-foreground"
+  />
+  <td
+    class="px-4 py-2.5 text-center"
+  >
+    <span>
+      L4
+    </span>
+  </td>
+  <td
+    class="px-4 py-2.5 text-center"
+  >
+    <span
+      class="inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded text-green-700 bg-green-50"
+    >
+      ⭐
+
+      Exceeds
+       +1
+    </span>
+  </td>
+</tr>
+ ✓ src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > does not present a skill that was never assessed as a gap 38ms
+ × src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > flags a gap that rests on thin evidence instead of stating it flatly 24ms
+   → Unable to find an element with the text: /low confidence/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<tr
+  class="border-b last:border-0"
+>
+  <td
+    class="px-4 py-2.5"
+  >
+    React / Frontend Development
+  </td>
+  <td
+    class="px-4 py-2.5 text-center text-muted-foreground"
+  />
+  <td
+    class="px-4 py-2.5 text-center"
+  >
+    <span>
+      L2
+    </span>
+  </td>
+  <td
+    class="px-4 py-2.5 text-center"
+  >
+    <span
+      class="inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded text-amber-700 bg-amber-50"
+    >
+      ⚠
+
+      Gap
+       -1
+    </span>
+  </td>
+</tr>
+ × src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > only shows the override legend when an override exists 17ms
+   → expect(element).not.toBeInTheDocument()
+
+expected document not to contain element, found <span
+  class="ml-auto"
+>
+  ✏ = human override applied
+</span> instead
+ × src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > renders an empty comparison list without crashing and says so 3ms
+   → Unable to find an element with the text: /no skills to compare/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      class="space-y-3"
+    >
+      <div
+        class="overflow-x-auto rounded-lg border"
+      >
+        <table
+          class="w-full text-sm"
+        >
+          <thead>
+            <tr
+              class="border-b bg-muted/50"
+            >
+              <th
+                class="text-left px-4 py-2.5 font-medium"
+              >
+                Skill
+              </th>
+              <th
+                class="text-center px-4 py-2.5 font-medium"
+              >
+                Required
+              </th>
+              <th
+                class="text-center px-4 py-2.5 font-medium"
+              >
+                Candidate
+              </th>
+              <th
+                class="text-center px-4 py-2.5 font-medium"
+              >
+                Result
+              </th>
+            </tr>
+          </thead>
+          <tbody />
+        </table>
+      </div>
+      <div
+        class="flex items-center gap-4 text-xs text-muted-foreground"
+      >
+        <span
+          class="ml-auto"
+        >
+          ✏ = human override applied
+        </span>
+      </div>
+    </div>
+  </div>
+</body>
+ × src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > keeps a very long skill label inside the table 19ms
+   → expected 'px-4 py-2.5' to match /break-words/
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 6 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > shows the required level that the API sends as expected_level
+Error: expect(element).toHaveTextContent()
+
+Expected element to have text content:
+  L3
+Received:
+
+ ❯ src/components/fitgap/ComparisonTable.test.tsx:49:61
+     47|     render(<ComparisonTable comparisons={apiRows} />);
+     48|
+     49|     expect(within(rowFor("React")).getAllByRole("cell")[1]).toHaveText…
+       |                                                             ^
+     50|     expect(within(rowFor("System Design")).getAllByRole("cell")[1]).to…
+     51|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/6]⎯
+
+ FAIL  src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > marks only rows with a human override
+TestingLibraryElementError: Unable to find a label with the text of: Overridden by assessor
+
+Ignored nodes: comments, script, style
+<tr
+  class="border-b last:border-0"
+>
+  <td
+    class="px-4 py-2.5"
+  >
+    SQL
+  </td>
+  <td
+    class="px-4 py-2.5 text-center text-muted-foreground"
+  />
+  <td
+    class="px-4 py-2.5 text-center"
+  >
+    <span>
+      L4
+    </span>
+  </td>
+  <td
+    class="px-4 py-2.5 text-center"
+  >
+    <span
+      class="inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded text-green-700 bg-green-50"
+    >
+      ⭐
+
+      Exceeds
+       +1
+    </span>
+  </td>
+</tr>
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ getAllByLabelText node_modules/@testing-library/dom/dist/queries/label-text.js:111:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/components/fitgap/ComparisonTable.test.tsx:56:34
+     54|     render(<ComparisonTable comparisons={apiRows} />);
+     55|
+     56|     expect(within(rowFor("SQL")).getByLabelText("Overridden by assesso…
+       |                                  ^
+     57|     expect(within(rowFor("React")).queryByLabelText("Overridden by ass…
+     58|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/6]⎯
+
+ FAIL  src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > flags a gap that rests on thin evidence instead of stating it flatly
+TestingLibraryElementError: Unable to find an element with the text: /low confidence/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<tr
+  class="border-b last:border-0"
+>
+  <td
+    class="px-4 py-2.5"
+  >
+    React / Frontend Development
+  </td>
+  <td
+    class="px-4 py-2.5 text-center text-muted-foreground"
+  />
+  <td
+    class="px-4 py-2.5 text-center"
+  >
+    <span>
+      L2
+    </span>
+  </td>
+  <td
+    class="px-4 py-2.5 text-center"
+  >
+    <span
+      class="inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded text-amber-700 bg-amber-50"
+    >
+      ⚠
+
+      Gap
+       -1
+    </span>
+  </td>
+</tr>
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/components/fitgap/ComparisonTable.test.tsx:76:36
+     74|     render(<ComparisonTable comparisons={lowConfidenceGap} />);
+     75|
+     76|     expect(within(rowFor("React")).getByText(/low confidence/i)).toBeI…
+       |                                    ^
+     77|   });
+     78|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/6]⎯
+
+ FAIL  src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > only shows the override legend when an override exists
+Error: expect(element).not.toBeInTheDocument()
+
+expected document not to contain element, found <span
+  class="ml-auto"
+>
+  ✏ = human override applied
+</span> instead
+ ❯ src/components/fitgap/ComparisonTable.test.tsx:84:63
+     82|
+     83|     rerender(<ComparisonTable comparisons={[apiRows[0]]} />);
+     84|     expect(screen.queryByText(/human override applied/i)).not.toBeInTh…
+       |                                                               ^
+     85|   });
+     86|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/6]⎯
+
+ FAIL  src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > renders an empty comparison list without crashing and says so
+TestingLibraryElementError: Unable to find an element with the text: /no skills to compare/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      class="space-y-3"
+    >
+      <div
+        class="overflow-x-auto rounded-lg border"
+      >
+        <table
+          class="w-full text-sm"
+        >
+          <thead>
+            <tr
+              class="border-b bg-muted/50"
+            >
+              <th
+                class="text-left px-4 py-2.5 font-medium"
+              >
+                Skill
+              </th>
+              <th
+                class="text-center px-4 py-2.5 font-medium"
+              >
+                Required
+              </th>
+              <th
+                class="text-center px-4 py-2.5 font-medium"
+              >
+                Candidate
+              </th>
+              <th
+                class="text-center px-4 py-2.5 font-medium"
+              >
+                Result
+              </th>
+            </tr>
+          </thead>
+          <tbody />
+        </table>
+      </div>
+      <div
+        class="flex items-center gap-4 text-xs text-muted-foreground"
+      >
+        <span
+          class="ml-auto"
+        >
+          ✏ = human override applied
+        </span>
+      </div>
+    </div>
+  </div>
+</body>
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/components/fitgap/ComparisonTable.test.tsx:90:19
+     88|     render(<ComparisonTable comparisons={[]} />);
+     89|
+     90|     expect(screen.getByText(/no skills to compare/i)).toBeInTheDocumen…
+       |                   ^
+     91|   });
+     92|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/6]⎯
+
+ FAIL  src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > keeps a very long skill label inside the table
+AssertionError: expected 'px-4 py-2.5' to match /break-words/
+
+- Expected:
+/break-words/
+
++ Received:
+"px-4 py-2.5"
+
+ ❯ src/components/fitgap/ComparisonTable.test.tsx:98:28
+     96|
+     97|     const cell = within(screen.getByRole("row", { name: /Distributed S…
+     98|     expect(cell.className).toMatch(/break-words/);
+       |                            ^
+     99|   });
+    100| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/6]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  6 failed | 1 passed (7)
+   Start at  09:29:32
+   Duration  1.79s (transform 132ms, setup 167ms, collect 97ms, tests 425ms, environment 700ms, prepare 222ms)

@@ -1,0 +1,21 @@
+
+ RUN  v3.2.7 /home/claude/rakamindev/ai-interview-platform/web
+
+ ✓ src/pages/fitgap/FitGapReportPage.test.tsx > FitGapReportPage > asks the API to generate the report once, no matter how long generation takes 47ms
+ ✓ src/pages/fitgap/FitGapReportPage.test.tsx > FitGapReportPage > shows the report and stops polling once it exists 37ms
+ ✓ src/pages/fitgap/FitGapReportPage.test.tsx > FitGapReportPage > tells the user when the report could not be loaded, instead of generating another one 127ms
+ ✓ src/pages/fitgap/FitGapReportPage.test.tsx > FitGapReportPage > tells the user when generation could not be started 18ms
+ ✓ src/pages/fitgap/FitGapReportPage.test.tsx > FitGapReportPage > stops waiting after a while instead of spinning forever 12ms
+ ✓ src/pages/fitgap/FitGapReportPage.test.tsx > FitGapReportPage > tells the user when the portfolio itself could not be loaded 8ms
+ ✓ src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > shows the required level that the API sends as expected_level 273ms
+ ✓ src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > marks only rows with a human override 76ms
+ ✓ src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > does not present a skill that was never assessed as a gap 40ms
+ ✓ src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > flags a gap that rests on thin evidence instead of stating it flatly 19ms
+ ✓ src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > only shows the override legend when an override exists 11ms
+ ✓ src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > renders an empty comparison list without crashing and says so 2ms
+ ✓ src/components/fitgap/ComparisonTable.test.tsx > ComparisonTable > keeps a very long skill label inside the table 22ms
+
+ Test Files  2 passed (2)
+      Tests  13 passed (13)
+   Start at  09:32:12
+   Duration  3.26s (transform 186ms, setup 251ms, collect 374ms, tests 693ms, environment 1.28s, prepare 255ms)
