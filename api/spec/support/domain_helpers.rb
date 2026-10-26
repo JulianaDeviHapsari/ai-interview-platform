@@ -51,4 +51,38 @@ module DomainHelpers
     end
     vacancy
   end
+
+  # A finished interview: an assessment with configured skills, a session whose
+  # coverage map says how deeply each skill was actually discussed, and a transcript.
+  # skills: [{ id: 'sk-react', label: 'React', state: 'covered', probes: 3 }]
+  def create_interview(organization, skills:, discovered: [])
+    assessment = Assessment.create!(
+      tenant_id: organization.id, created_by: 1, name: 'Frontend role', time_limit_min: 30
+    )
+    skills.each_with_index do |skill, index|
+      assessment.assessment_skills.create!(
+        skill_id: skill[:id], skill_label: skill[:label], display_order: index,
+        l1_anchor: 'L1 anchor', l2_anchor: 'L2 anchor', l3_anchor: 'L3 anchor',
+        l4_anchor: 'L4 anchor', l5_anchor: 'L5 anchor'
+      )
+    end
+
+    session = Session.create!(
+      tenant_id: organization.id, assessment: assessment, status: 'ended', end_reason: 'manual_assessor'
+    )
+    skills.each do |skill|
+      session.coverage_maps.create!(
+        skill_id: skill[:id], skill_label: skill[:label], is_discovered: false,
+        state: skill[:state], probe_count: skill[:probes]
+      )
+    end
+    discovered.each do |skill|
+      session.coverage_maps.create!(
+        skill_id: nil, skill_label: skill[:label], is_discovered: true,
+        state: skill[:state], probe_count: skill[:probes]
+      )
+    end
+    session.transcript_turns.create!(turn_number: 1, speaker: 'candidate', text: 'I mostly work with React.')
+    session
+  end
 end
