@@ -10,14 +10,14 @@ module Api
 
       # GET /api/v1/sessions/:id/portfolio
       def show
-        if @portfolio.nil? || @portfolio.generating?
+        if @portfolio.nil? || (@portfolio.generating? && !@portfolio.stale_generating?)
           return render json: { status: "generating" }, status: :accepted
         end
 
-        if @portfolio.failed?
+        if @portfolio.display_status == "failed"
           return json_response(
             portfolio: portfolio_json(@portfolio),
-            error: @portfolio.generation_error
+            error: @portfolio.display_error
           )
         end
 
@@ -32,11 +32,11 @@ module Api
           return json_error("No portfolio found for this session", :not_found)
         end
 
-        unless portfolio.failed?
+        unless portfolio.failed? || portfolio.stale_generating?
           return json_error("Portfolio can only be regenerated when status is 'failed'", :unprocessable_entity)
         end
 
-        portfolio.update!(generation_status: "pending", generation_error: nil)
+        portfolio.update!(generation_status: "pending", generation_error: nil, generation_started_at: nil)
         PortfolioGeneratorWorker.perform_async(@session.id)
 
         json_response(
@@ -165,16 +165,24 @@ module Api
       end
 
       def portfolio_json(portfolio)
-        {
+        json = {
           id:                portfolio.id,
           session_id:        portfolio.session_id,
           candidate_id:      portfolio.candidate_id,
-          generation_status: portfolio.generation_status,
+          generation_status: portfolio.display_status,
           generated_at:      portfolio.generated_at,
-          generation_error:  portfolio.generation_error,
+          generation_error:  portfolio.display_error,
           skills:            portfolio.portfolio_skills.map(&method(:portfolio_skill_json)),
           overrides:         portfolio.assessor_overrides.map(&method(:override_json))
         }
+
+        if portfolio.complete?
+          json[:unassessed_skills] = portfolio.unassessed_skills.map do |s|
+            { skill_id: s.skill_id, skill_label: s.skill_label }
+          end
+        end
+
+        json
       end
 
       def portfolio_skill_json(skill)
