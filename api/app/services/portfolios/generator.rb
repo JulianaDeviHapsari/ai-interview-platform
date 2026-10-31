@@ -173,7 +173,9 @@ module Portfolios
       coverage_maps = @session.coverage_maps.to_a
 
       # All or nothing: a failure half-way must not leave a partial portfolio.
-      ActiveRecord::Base.transaction do
+      # requires_new makes this a real (savepoint) transaction even when the
+      # caller is already inside one, so the rollback always happens.
+      ActiveRecord::Base.transaction(requires_new: true) do
         portfolio.portfolio_skills.destroy_all
 
         entries(data, 'configured_skills').each { |entry| save_skill(portfolio, entry, coverage_maps, discovered: false) }
