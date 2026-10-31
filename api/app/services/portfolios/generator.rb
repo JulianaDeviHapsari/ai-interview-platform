@@ -172,14 +172,18 @@ module Portfolios
 
       coverage_maps = @session.coverage_maps.to_a
 
-      # All or nothing: a failure half-way must not leave a partial portfolio.
-      # requires_new makes this a real (savepoint) transaction even when the
-      # caller is already inside one, so the rollback always happens.
+      # Build and check every skill BEFORE writing anything: one bad entry then
+      # stops the whole run and leaves the database (and any old portfolio) untouched.
+      skills = entries(data, 'configured_skills').map { |entry| build_skill(portfolio, entry, coverage_maps, discovered: false) } +
+               entries(data, 'discovered_skills').map { |entry| build_skill(portfolio, entry, coverage_maps, discovered: true) }
+      skills = skills.compact
+      skills.each(&:validate!)
+
+      # Then write them together. If the database itself fails half-way,
+      # the transaction undoes the partial write.
       ActiveRecord::Base.transaction(requires_new: true) do
         portfolio.portfolio_skills.destroy_all
-
-        entries(data, 'configured_skills').each { |entry| save_skill(portfolio, entry, coverage_maps, discovered: false) }
-        entries(data, 'discovered_skills').each { |entry| save_skill(portfolio, entry, coverage_maps, discovered: true) }
+        skills.each(&:save!)
       end
     end
 
@@ -188,20 +192,22 @@ module Portfolios
       list.is_a?(Array) ? list.select { |entry| entry.is_a?(Hash) } : []
     end
 
-    def save_skill(portfolio, entry, coverage_maps, discovered:)
+    # Returns an unsaved PortfolioSkill, or nil when there is nothing to rate.
+    def build_skill(portfolio, entry, coverage_maps, discovered:)
       coverage = find_coverage(coverage_maps, entry, discovered)
 
       # Never discussed in the interview: there is no evidence to rate. It stays
       # "not assessed" rather than getting a made-up level.
-      return if coverage&.state == 'not_yet'
+      return nil if coverage&.state == 'not_yet'
 
       level = parse_level(entry['level'])
       if level.nil?
         Rails.logger.warn("[N10] Skipped a skill with no usable level (session #{@session.id})")
-        return
+        return nil
       end
 
-      portfolio.portfolio_skills.create!(
+      PortfolioSkill.new(
+        portfolio_id:       portfolio.id,
         skill_id:           discovered ? nil : (coverage&.skill_id || entry['skill_id']),
         skill_label:        coverage&.skill_label || entry['skill_label'],
         is_discovered:      discovered,
